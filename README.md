@@ -1,7 +1,8 @@
 # Weather Dashboard
   ![Github License](https://img.shields.io/badge/license-MIT-green)
   
-  
+  ![image](https://user-images.githubusercontent.com/117605647/220519876-59a5063e-a63e-4834-a316-55140fb70eb6.png)
+
   ## Table of Contents
   
   [Description](#description)
