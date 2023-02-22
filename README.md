@@ -15,13 +15,13 @@
   As a traveler I want to see the weather outlook for multiple cities so that I could plan a trip accordingly
   
   ## Installation
-  
+  NO installation needs
   
   ## Usage
-  
+  Enter the name of the City and click serch button
   
   ## Tests
-  
+  NO testing needs
   
   ## Contributing
   Any contributors are welcome
