@@ -170,7 +170,7 @@ function initPage() {
         renderSearchHistory();
     })
     
-    / Function to convert temperature from Kelvin to Fahrenheit
+    // Function to convert temperature from Kelvin to Fahrenheit
     function k2f(K) {
        
         return Math.floor((K - 273.15) *1.8 +32);
