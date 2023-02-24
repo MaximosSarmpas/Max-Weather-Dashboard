@@ -145,7 +145,7 @@ function initPage() {
             })
         });  
     }
-
+   // Add event listener to the search button
     searchEl.addEventListener("click",function() {
         
         const searchTerm = inputEl.value;
@@ -153,28 +153,35 @@ function initPage() {
         getWeather(searchTerm);
         
         searchHistory.push(searchTerm);
-        
+       
+        // Store the updated search history in local storage
         localStorage.setItem("search",JSON.stringify(searchHistory));
-        
+       
+        // Render the updated search history on the page
         renderSearchHistory();
     })
-
+    
+    // Add event listener to the clear history button
     clearEl.addEventListener("click",function() {
-       
+      
+        // Clear the search history
         searchHistory = [];
        
         renderSearchHistory();
     })
-
+    
+    / Function to convert temperature from Kelvin to Fahrenheit
     function k2f(K) {
        
         return Math.floor((K - 273.15) *1.8 +32);
     }
 
     function renderSearchHistory() {
-        
+       
+        // Clear the search history display
         historyEl.innerHTML = "";
         
+        // Loop through the search history array and add each item to the display
         for (let i=0; i<searchHistory.length; i++) {
            
             const historyItem = document.createElement("input");
@@ -188,17 +195,20 @@ function initPage() {
            
             historyItem.setAttribute("value", searchHistory[i]);
            
+            // Add event listener to the search history item to get the weather information for that city
             historyItem.addEventListener("click",function() {
                
                 getWeather(historyItem.value);
             })
             
+            // Append the search history item to the display
             historyEl.append(historyItem);
         }
     }
 
     renderSearchHistory();
     
+    // Get the weather information of the last searched city and display it on the page
     if (searchHistory.length > 0) {
        
         getWeather(searchHistory[searchHistory.length - 1]);
